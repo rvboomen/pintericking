@@ -77,4 +77,8 @@ Pintericking::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # required for Heroku
+  # Note to set this to your actual house
+  config.action_mailer.default_url_options = { :host => 'pintericking.herokuapp.com' }
 end
